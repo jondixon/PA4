@@ -32,8 +32,8 @@ ptTx = 1
 ptTy = 1
 
 
-data = open("rand.txt", "r").read()
-lines = [data[i:i+16] for i in range(0, len(data), 1)]
+data = open("ebola.txt", "r").read()
+#lines = [data[i:i+16] for i in range(0, len(data), 1)]
 
 fig = plt.figure()
 ax1 = fig.add_subplot(1,1,1)
@@ -155,38 +155,38 @@ def V(midx, midy):
     return( midx, midy )
 
 
-for SEQUENCE in lines:
-    midx = .5
-    midy = .5
-    for amino in SEQUENCE:
-        if amino == 'A':
-            midx, midy = A(midx, midy)
-        if amino == 'C':
-            midx, midy = C(midx, midy)
-        if amino == 'G':
-            midx, midy = G(midx, midy)
-        if amino == 'T':
-            midx, midy = T(midx, midy)
-        if amino == 'R':
-            midx, midy = R(midx, midy)
-        if amino == 'Y':
-            midx, midy = Y(midx, midy)
-        if amino == 'K':
-            midx, midy = K(midx, midy)
-        if amino == 'M':
-            midx, midy = M(midx, midy)
-        if amino == 'S':
-            midx, midy = S(midx, midy)
-        if amino == 'W':
-            midx, midy = W(midx, midy)
-        if amino == 'B':
-            midx, midy = B(midx, midy)
-        if amino == 'D':
-            midx, midy = D(midx, midy)
-        if amino == 'H':
-            midx, midy = H(midx, midy)
-        if amino == 'V':
-            midx, midy = V(midx, midy)
+#for SEQUENCE in lines:
+#    midx = .5
+#    midy = .5
+for amino in data:
+    if amino == 'A':
+        midx, midy = A(midx, midy)
+    if amino == 'C':
+        midx, midy = C(midx, midy)
+    if amino == 'G':
+        midx, midy = G(midx, midy)
+    if amino == 'T':
+        midx, midy = T(midx, midy)
+    if amino == 'R':
+        midx, midy = R(midx, midy)
+    if amino == 'Y':
+        midx, midy = Y(midx, midy)
+    if amino == 'K':
+        midx, midy = K(midx, midy)
+    if amino == 'M':
+        midx, midy = M(midx, midy)
+    if amino == 'S':
+        midx, midy = S(midx, midy)
+    if amino == 'W':
+        midx, midy = W(midx, midy)
+    if amino == 'B':
+        midx, midy = B(midx, midy)
+    if amino == 'D':
+        midx, midy = D(midx, midy)
+    if amino == 'H':
+        midx, midy = H(midx, midy)
+    if amino == 'V':
+        midx, midy = V(midx, midy)
 
 
 
